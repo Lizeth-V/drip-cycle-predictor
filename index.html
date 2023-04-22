@@ -37,6 +37,7 @@
 
     <section id = tracker>
         <div class="center">
+            <form>
             <div class="Date">
                 <h2> Last Period Date </h2>
                 <label for="lastdate"> Last Period Date: </label>
@@ -79,9 +80,25 @@
 
                 </select>
             </div>
+            </form>
         </div>
 
+        <button type="button" onclick="myFunction()">Submit!</button>
+        <p id="result"></p>
+
     </section>
+
+    <section id="motive">
+
+    </section>
+
+    <script>
+        function myFunction(){
+            var x = document.getElementById("daylength").value;
+            // document.write("Estimated Start Date for you next Period");
+            document.getElementById("result").innerHTML = x;
+        }
+    </script>
 </body>
 
 </html>
