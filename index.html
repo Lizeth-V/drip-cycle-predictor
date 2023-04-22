@@ -1,18 +1,43 @@
 <html>
 
 <style>
-    body{}
+    *{
+        box-sizing: border-box;
+    }
 
     h1{
         text-align: center;
         font-size: 200%;
     }
 
+    .column{
+        float: left;
+        width: 33.33%;
+    }
+    .row:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
 </style>
 
 
 <body>
     <h1> Drip </h1>
+
+    <section id = tracker>
+        <div class="row">
+            <div class="column"></div>
+                <h2> Last Period Date </h2>
+            <div class="column"></div>
+                <h3> Period Duration </h3>
+            <div class="column"></div>
+                <h4> Cycle Length </h4>
+        </div>
+
+    </section>
 </body>
 
 </html>
