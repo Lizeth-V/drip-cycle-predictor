@@ -1,41 +1,84 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
 
-<style>
-    *{
-        box-sizing: border-box;
-    }
+        body{
+            height: 100%;
+            background: radial-gradient(circle, rgba(239,233,199,1) 0%, rgba(222,146,208,1) 73%, rgba(215,177,238,1) 100%);
+            background-attachment: fixed;
+            background-size: contain;
+            background-position: center;
+        }
 
-    h1{
-        text-align: center;
-        font-size: 200%;
-    }
+        h1{
+            font-family: 'Poppins';
+            text-align: center;
+            font-size: 200%;
+            font-style: normal;
+            text-align: center;
+        }
+        h2{
+            font-family: 'Poppins';
+        }
+        .center{
+            
+        }
 
-    .column{
-        float: left;
-        width: 33.33%;
-    }
-    .row:after{
-        content: "";
-        display: table;
-        clear: both;
-    }
 
 
-</style>
-
+    </style>
+</head>
 
 <body>
     <h1> Drip </h1>
 
     <section id = tracker>
-        <div class="row">
-            <div class="column"></div>
+        
+            <div class="Date">
                 <h2> Last Period Date </h2>
-            <div class="column"></div>
-                <h3> Period Duration </h3>
-            <div class="column"></div>
-                <h4> Cycle Length </h4>
-        </div>
+                <label for="lastdate"> Last Period Date: </label>
+                <input type="date" id="lastdate" name="lastdate"
+            </div>
+            <div class="PeriodLenght">
+                <h2> Period Duration </h2>
+                <label for="daylength"> Period Length: </label>
+                <select name="daylength" id="daylength">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+            </div>
+            <div class="CycleLenght">
+                <h2> Cycle Length </h2>
+                <label for="cyclelen"> Cycle Length: </label>
+                <select name="cyclelen" id="cyclelen">
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+
+                </select>
+            </div>
+        
 
     </section>
 </body>
