@@ -27,9 +27,19 @@
             font-family: sans-serif;
             color:#6d6875;
         }
+
+        p1{
+            font-family: sans-serif;
+            font-size: 120%;
+            color:#6d6875;
+        }
         .center{
             text-align: center;
         }
+        .button{
+            margin: 40px 2px;
+        }
+        
 
 
 
@@ -40,6 +50,7 @@
     <h1> Drip </h1>
 
     <section id = tracker>
+
         <div class="center">
             <form>
             <div class="Date">
@@ -87,7 +98,13 @@
             </form>
         </div>
 
-        <button type="button" onclick="myFunction()">Submit!</button>
+        <h2></h2> 
+
+        <button class="submit" onclick="myFunction()">Submit!</button>
+        
+        <h2></h2>
+
+        <p1 id="newtext"></p1>
         <p id="result"></p>
 
     </section>
@@ -98,9 +115,22 @@
 
     <script>
         function myFunction(){
-            var x = document.getElementById("daylength").value;
             // document.write("Estimated Start Date for you next Period");
-            document.getElementById("result").innerHTML = x;
+            document.getElementById("newtext").innerHTML = "Estimated Start Date for you next Period";
+
+            var day, month, year;
+
+            $('submit').on('click', function(){
+                var date = new  Date($('lastdate').val());
+                var day = date.getDate();
+                var month = date.getMonth();
+                var year = date.getFullYear();
+
+            });
+
+            // var x = document.getElementById("daylength").value;
+            document.getElementById("result").innerHTML = "Day:" + day;
+            document.write("Day:" + day);
         }
     </script>
 </body>
