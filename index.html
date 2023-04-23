@@ -117,40 +117,39 @@
     </section>
 
     <script>
+        
         function myFunction(){
             // document.write("Estimated Start Date for you next Period");
             document.getElementById("newtext").innerHTML = "Estimated Start Date for you next Period";
 
-            // var day, month, year;
+           
+            var temp = document.getElementById('lastdate').value();
+            var cycleDays = document.getElementById('cyclelen').value();
 
-            // $('submit').on('click', function(){
-            //     var date = new  Date($('lastdate').val());
-            //     var day = date.getDate();
-            //     var month = date.getMonth();
-            //     var year = date.getFullYear();
+            var prevDate = new Date(temp);
+            var newStartDate = new Date(prevDate);
 
-            // });
+            newStartDate.setDate(newStartDate.getDate() + cycleDays);
 
-            // var x = document.getElementById("daylength").value;
-            // document.getElementById("result").innerHTML = "Day:" + day;
-            // document.write("Day:" + day);
 
-            //-----
+            var dd = newStartDate.getDate();
+            var mm = newStartDate.getMonth();
+            var y = newStartDate.getFullYear();
 
-            let previousD = new Date(document.getElementById("daylength").value);
-            const startD = addDays(previousD, 5);
+            var formatedDate = mm + '/' + dd + '/' + y;
 
-            document.getElementById("result").innerHTML = "Day:" + startD;
 
+            document.getElementById("result").innerHTML = "Day:" + formatedDate;
+            
 
 
 
         }
 
-        function addDays(date, days){
-            date.setDate(date.getDate() + days);
-            return date;
-        }
+        // function addDays(date, days){
+        //     date.setDate(date.getDate() + days);
+        //     return date;
+        // }
     </script>
 </body>
 
