@@ -121,19 +121,35 @@
             // document.write("Estimated Start Date for you next Period");
             document.getElementById("newtext").innerHTML = "Estimated Start Date for you next Period";
 
-            var day, month, year;
+            // var day, month, year;
 
-            $('submit').on('click', function(){
-                var date = new  Date($('lastdate').val());
-                var day = date.getDate();
-                var month = date.getMonth();
-                var year = date.getFullYear();
+            // $('submit').on('click', function(){
+            //     var date = new  Date($('lastdate').val());
+            //     var day = date.getDate();
+            //     var month = date.getMonth();
+            //     var year = date.getFullYear();
 
-            });
+            // });
 
             // var x = document.getElementById("daylength").value;
-            document.getElementById("result").innerHTML = "Day:" + day;
-            document.write("Day:" + day);
+            // document.getElementById("result").innerHTML = "Day:" + day;
+            // document.write("Day:" + day);
+
+            //-----
+
+            let previousD = new Date(document.getElementById("daylength").value);
+            const startD = addDays(previousD, 5);
+
+            document.getElementById("result").innerHTML = "Day:" + startD;
+
+
+
+
+        }
+
+        function addDays(date, days){
+            date.setDate(date.getDate() + days);
+            return date;
         }
     </script>
 </body>
