@@ -57,8 +57,9 @@
             <div class="Date">
                 <h2> Last Period Date </h2>
                 <label for="lastdate"> Last Period Date: </label>
-                <input type="date" id="lastdate" name="lastdate"
+                <input type="date" id="lastdate" name="lastdate">
             </div>
+
             <div class="PeriodLenght">
                 <h2> Period Duration </h2>
                 <label for="daylength"> Period Length: </label>
@@ -101,12 +102,18 @@
 
         <h2></h2> 
 
-        <button class="submit" onclick="myFunction()">Submit!</button>
-        
+        <!-- <button class="submit" onclick="myFunction()">Submit!</button> -->
+        <p>
+        <input type="button" onclick="myFunction()" value="Submit" />
+         </p>
+
         <h2></h2>
 
         <p1 id="newtext"></p1>
-        <p id="result"></p>
+        
+        <p>
+            <input id="result" type="text" />
+        </p>
 
     </section>
 
@@ -116,6 +123,11 @@
 
     <script>
         
+        $(document).ready(function () {
+        $('#lastdate').datepicker();
+        $('#result').datepicker();
+        });
+
         function myFunction(){
             // document.write("Estimated Start Date for you next Period");
             document.getElementById("newtext").innerHTML = "Estimated Start Date for you next Period";
@@ -127,27 +139,20 @@
             var prevDate = new Date(temp);
             var newStartDate = new Date(prevDate);
 
-            newStartDate.setDate(newStartDate.getDate() + cycleDays);
+            newStartDate.setDate(newStartDate.getDate() + 5);
 
 
             var dd = newStartDate.getDate();
-            var mm = newStartDate.getMonth();
+            var mm = newStartDate.getMonth() + 1;
             var y = newStartDate.getFullYear();
 
             var formatedDate = mm + '/' + dd + '/' + y;
 
 
-            document.getElementById("result").innerHTML = "Day:" + formatedDate;
-            
-
-
+            document.getElementById('result').value = formatedDate;
 
         }
 
-        // function addDays(date, days){
-        //     date.setDate(date.getDate() + days);
-        //     return date;
-        // }
     </script>
 </body>
 
