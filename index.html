@@ -13,6 +13,7 @@
             background-attachment: fixed;
             background-size: contain;
             background-position: center;
+            padding: 0px 100px 0px 100px;
         }
         h1{
             font-family: customFont;
@@ -27,8 +28,21 @@
             font-family: sans-serif;
             color:#6d6875;
         }
-
+        h4{
+            font-family: customFont;
+            text-align: center;
+            font-size:200%;
+            color:#b5838d;
+        }
+        p{
+            font-family: sans-serif;
+            font-size: 120%;
+            color:#6d6875;
+        }
         p1{
+            text-align: center;
+        }
+        p4{
             font-family: sans-serif;
             font-size: 120%;
             color:#6d6875;
@@ -38,6 +52,47 @@
         }
         .button{
             margin: 40px 2px;
+        }
+        .MotiveA{
+            text-align: center;
+        }
+        .buttons{
+            text-align: center;
+        }
+
+        .b1 {
+        background-color: #b5838d;
+        border: 3px solid #f7dccd;
+        color: #f7dccd;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline;
+        font-size: 20px;
+        margin: 10px 30px;
+        cursor: pointer;
+        }
+        
+        .b2 {
+        background-color: #b5838d;
+        border: 3px solid #f7dccd;
+        color: #f7dccd;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline;
+        font-size: 20px;
+        margin: 10px 30px;
+        cursor: pointer;
+        }
+        .b3 {
+        background-color: #b5838d;
+        border: 3px solid #f7dccd;
+        color: #f7dccd;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline;
+        font-size: 20px;
+        margin: 10px 30px;
+        cursor: pointer;
         }
         
 
@@ -53,105 +108,90 @@
             <img src = "DripMooo.png" alt = "Drip Moo" style = "position:absolute;width:250px;height:250px;padding:0px 0px 0px 0px">
         </div>
         <div class="center">
-            <form>
+
             <div class="Date">
                 <h2> Last Period Date </h2>
-                <label for="lastdate"> Last Period Date: </label>
-                <input type="date" id="lastdate" name="lastdate">
+                <label for="lastdate"> First Day of your Last Period: </label>
+                <input type="date" id="lastdate">
             </div>
 
             <div class="PeriodLenght">
                 <h2> Period Duration </h2>
                 <label for="daylength"> Period Length: </label>
-                <select name="daylength" id="daylength">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+                <input type="number" id="daylength">
                 
             </div>
             <div class="CycleLenght">
                 <h2> Cycle Length </h2>
                 <label for="cyclelen"> Cycle Length: </label>
-                <select name="cyclelen" id="cyclelen">
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                    <option value="32">32</option>
-                    <option value="33">33</option>
-                    <option value="34">34</option>
-                    <option value="35">35</option>
-
-                </select>
+                <input type="number" id="cyclelen">
+                
             </div>
-            </form>
+ 
+            <h2></h2> 
+
+            
+            <button onclick="addDaysF()">Submit!</button>
+
+            <p id="output"></p> 
+            <p id="output2"></p> 
+            
+            
+
+            <h2></h2>
+
+            
         </div>
 
-        <h2></h2> 
-
-        <!-- <button class="submit" onclick="myFunction()">Submit!</button> -->
-        <p>
-        <input type="button" onclick="myFunction()" value="Submit" />
-         </p>
-
-        <h2></h2>
-
-        <p1 id="newtext"></p1>
         
-        <p>
-            <input id="result" type="text" />
-        </p>
 
     </section>
 
     <section id="motive">
 
+        <div class="MotiveA">
+            <h1> </h1>
+            <h4> Why is manually tracking your period important? </h4>
+            <p4> By eliminating the use of period tracking apps, we can create a safer environment for people to track their cycle. <br>Due to the recent privacy violations of established well-known period tracking apps, logging your personal information has become more <br>concerning than before. We want to allow people to have control and track their own periods.
+            </p4>
+        </div>
+
+    </section>
+
+    <section id="wellbeing">
+        <div class="health">
+            <h4> &#9825 Stay healthy and Eco-friendly during your period! &#127793 </h4>
+            <div class="buttons">
+                <button class="b1" onclick="window.location.href='https://cora.life/products/applicator-tampons';">
+                    Non-toxic Tampons
+                </button>
+                <button class="b2" onclick="window.location.href='https://cora.life/products/period-pads';">
+                    Non-toxic Pads
+                </button>
+                <button class="b3" onclick="window.location.href='https://shopdiva.com/';">
+                    Non-toxic Tampons
+                </button>
+
+            </div>
+                    
+            
+        </div>
+        
     </section>
 
     <script>
-        
-        $(document).ready(function () {
-        $('#lastdate').datepicker();
-        $('#result').datepicker();
-        });
-
-        function myFunction(){
-            // document.write("Estimated Start Date for you next Period");
-            document.getElementById("newtext").innerHTML = "Estimated Start Date for you next Period";
-
-           
-            var temp = document.getElementById('lastdate').value();
-            var cycleDays = document.getElementById('cyclelen').value();
-
-            var prevDate = new Date(temp);
-            var newStartDate = new Date(prevDate);
-
-            newStartDate.setDate(newStartDate.getDate() + 5);
 
 
-            var dd = newStartDate.getDate();
-            var mm = newStartDate.getMonth() + 1;
-            var y = newStartDate.getFullYear();
+        function addDaysF() {
+        const inputDate = new Date(document.getElementById('lastdate').value);
+        const inputDays = parseInt(document.getElementById('cyclelen').value);
+        const resultDate = new Date(inputDate.getTime() + ((inputDays + 1) * 24 * 60 * 60 * 1000));
+        document.getElementById('output').innerHTML = `Estimated Next Period Start Date: ${resultDate.toDateString()}`;
 
-            var formatedDate = mm + '/' + dd + '/' + y;
-
-
-            document.getElementById('result').value = formatedDate;
-
-        }
+        const periodDays = parseInt(document.getElementById('daylength').value);
+        const resultDate2 = new Date(resultDate.getTime() + ((periodDays - 1 ) * 24 * 60 * 60 * 1000));
+        document.getElementById('output2').innerHTML = `Estimated Next Period End Date: ${resultDate2.toDateString()}`;
+      }
 
     </script>
 </body>
