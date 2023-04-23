@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <style>
         @font-face{
             font-family: customFont;
@@ -22,7 +21,6 @@
             font-size: 420%;
             font-style: normal;
             text-align: center;
-            
         }
         h2{
             font-family: sans-serif;
@@ -75,7 +73,6 @@
             margin: 10px 30px;
             cursor: pointer;
         }
-
         .b1 {
         background-color: #b5838d;
         border: 3px solid #f7dccd;
@@ -87,7 +84,6 @@
         margin: 10px 30px;
         cursor: pointer;
         }
-        
         .b2 {
         background-color: #b5838d;
         border: 3px solid #f7dccd;
@@ -110,16 +106,13 @@
         margin: 10px 30px;
         cursor: pointer;
         }
-        
-
-
-
     </style>
 </head>
 
 <body>
     <h1> Drip </h1>
     <section id = tracker>
+
         <div class = "dripMoo">
             <img src = "DripMooo.png" alt = "Drip Moo" style = "position:absolute;width:250px;height:250px;padding:0px 0px 0px 0px">
         </div>
@@ -145,21 +138,14 @@
             </div>
  
             <h2></h2> 
-
-            
+ 
             <button class="b0" onclick="addDaysF()">Submit!</button>
 
             <p id="output"></p> 
             <p id="output2"></p> 
             
-            
-
             <h2></h2>
-
-            
         </div>
-
-        
 
     </section>
 
@@ -177,6 +163,7 @@
 
     <section id="wellbeing">
         <div class="health">
+
             <h4> &#9825 Stay healthy and Eco-friendly during your period! &#127793 </h4>
             <div class="buttons">
                 <button class="b1" onclick="window.location.href='https://cora.life/products/applicator-tampons';">
@@ -188,16 +175,13 @@
                 <button class="b3" onclick="window.location.href='https://shopdiva.com/';">
                     Eco-friendly Alternatives
                 </button>
-
             </div>
-                    
-            
+                
         </div>
         
     </section>
 
     <script>
-
 
         function addDaysF() {
         const inputDate = new Date(document.getElementById('lastdate').value);
