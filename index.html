@@ -42,6 +42,11 @@
         p1{
             text-align: center;
         }
+        p2{
+            font-family: sans-serif;
+            font-size: 70%;
+            color:#6d6875;
+        }
         p4{
             font-family: sans-serif;
             font-size: 120%;
@@ -58,6 +63,17 @@
         }
         .buttons{
             text-align: center;
+        }
+        .b0{
+            background-color: #6d6875;
+            border: 3px solid #f7dccd;
+            color: #f7dccd;
+            padding: 5px 10px;
+            text-align: center;
+            display: inline;
+            font-size: 20px;
+            margin: 10px 30px;
+            cursor: pointer;
         }
 
         .b1 {
@@ -112,26 +128,26 @@
             <div class="Date">
                 <h2> Last Period Date </h2>
                 <label for="lastdate"> First Day of your Last Period: </label>
-                <input type="date" id="lastdate">
+                <input type="date" id="lastdate" >
             </div>
 
             <div class="PeriodLenght">
                 <h2> Period Duration </h2>
                 <label for="daylength"> Period Length: </label>
-                <input type="number" id="daylength">
-                
+                <input type="number" id="daylength" >
             </div>
+
             <div class="CycleLenght">
                 <h2> Cycle Length </h2>
                 <label for="cyclelen"> Cycle Length: </label>
                 <input type="number" id="cyclelen">
-                
+                <p2> <br> *If unknown, on average a cycle lasts 28 days.* </p2>
             </div>
  
             <h2></h2> 
 
             
-            <button onclick="addDaysF()">Submit!</button>
+            <button class="b0" onclick="addDaysF()">Submit!</button>
 
             <p id="output"></p> 
             <p id="output2"></p> 
@@ -151,6 +167,7 @@
 
         <div class="MotiveA">
             <h1> </h1>
+            <h1></h1>
             <h4> Why is manually tracking your period important? </h4>
             <p4> By eliminating the use of period tracking apps, we can create a safer environment for people to track their cycle. <br>Due to the recent privacy violations of established well-known period tracking apps, logging your personal information has become more <br>concerning than before. We want to allow people to have control and track their own periods.
             </p4>
@@ -169,7 +186,7 @@
                     Non-toxic Pads
                 </button>
                 <button class="b3" onclick="window.location.href='https://shopdiva.com/';">
-                    Non-toxic Tampons
+                    Eco-friendly Alternatives
                 </button>
 
             </div>
